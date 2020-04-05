@@ -10,9 +10,9 @@ using Newtonsoft.Json;
 
 namespace DEVELOPERSINC.PodcastRSS
 {
-    public static class PodcastRSS
+    public static class RSSFeed
     {
-        [FunctionName("PodcastRSS")]
+        [FunctionName("RSSFeed")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
