@@ -14,7 +14,7 @@ namespace DEVELOPERSINC.PodcastRSS
     {
         [FunctionName("RSSFeed")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req, Stream myBlob, ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,[Blob("podcast/itunes.rss", FileAccess.Read, Connection = "StorageConnectionAppSetting")] Stream myBlob, ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
             
