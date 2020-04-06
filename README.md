@@ -55,7 +55,9 @@ Migrate the database to SQL Server by executing the commands below:
 
 ### Scaffold the controllers
 
-Add an MP3 file such as the Windows95.mp3 file in this repository to the wwwroot directory.  Scaffold the controllers with views then run the app and create a single podcast with 2 episodes for that podcast.  Make sure the URL for the PodcastEpisode is an MP3 file from wwwroot.
+Scaffold the controllers with views then run the app and create a single podcast with 2 episodes for that podcast.  Make sure to use a URL that points to an MP3 file in the wwwroot folder.  You may include your own files or use the Windows95.mp3 file in this repository.
+
+https://github.com/MicroJEdi/AzureFunctionPodcastRSS/blob/master/Windows95.mp3
   
 -----
 
@@ -64,6 +66,14 @@ Add an MP3 file such as the Windows95.mp3 file in this repository to the wwwroot
 ### Generate an RSS XML string
 
 Create a new action method in the PodcastController called RSSFeed that queries the pocast database and returns a string containing the Podcast RSS XML. 
+
+-----
+
+## Step 7.
+
+### Personalize your podcast's homepage 
+
+Update the HomeController Index View to promote your podcast and the URL to the RSS feed!
 
 -----
 
