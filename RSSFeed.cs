@@ -16,7 +16,9 @@ namespace DEVELOPERSINC.PodcastRSS
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req, ExecutionContext context, ILogger log)
         {
-            string responseMessage = context.FunctionDirectory+"\\itunes.rss";
+            string path = context.FunctionDirectory+"/itunes.rss";
+            string responseMessage = "";
+            responseMessage = File.ReadAllText(path);
 
             return new OkObjectResult(responseMessage);
         }
