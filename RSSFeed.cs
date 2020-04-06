@@ -18,7 +18,8 @@ namespace DEVELOPERSINC.PodcastRSS
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
             
-            string returnValue = File.ReadAllText(context.FunctionDirectory+"itunes.rss");
+            //string returnValue = File.ReadAllText(context.FunctionDirectory+"itunes.rss");
+            string returnValue = context.FunctionDirectory;
             string name = req.Query["name"];
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
