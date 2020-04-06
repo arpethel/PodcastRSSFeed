@@ -14,12 +14,12 @@ namespace DEVELOPERSINC.PodcastRSS
     {
         [FunctionName("RSSFeed")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req, [Blob("podcast/itunes.rss", FileAccess.Read, Connection = "AzureWebJobsStorage")] Stream myBlob, ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req, ExecutionContext context, ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
             
             string name = req.Query["name"];
-            name = myBlob.ToString();
+            name = context.FunctionDirectory+"\\twinkle.rss";
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
