@@ -19,7 +19,7 @@ namespace DEVELOPERSINC.PodcastRSS
             log.LogInformation("C# HTTP trigger function processed a request.");
             
             string name = req.Query["name"];
-            name = context.FunctionDirectory+"\\twinkle.rss";
+            name = context.FunctionDirectory+"\\itunes.rss";
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
