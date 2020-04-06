@@ -22,14 +22,7 @@ Define the properties required to properly abstract a podcast and a podcast epis
 
 https://help.apple.com/itc/podcasts_connect/#/itc1723472cb
 
-Create the ApplicationDbContext class in the Models folder.  The ApplicationDbContext class must inherit from the DbContext class, contain one contructor with an input parameter called options of type DbContextOptions<ApplicationDbContext> and call the base method's constructor with the options value as input.  
-
-  public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
-
-Finally add the Podcast and PostcastEpisode DbSet properties to the ApplicationDbContext class.
-
-  public DbSet<Podcast> Podcasts { get; set; }
-  public DbSet<PodcastEpisode> PodcastEpisodes { get; set; }
+Create the ApplicationDbContext class in the Models folder.  The ApplicationDbContext class must inherit from the DbContext class, contain one contructor with an input parameter called options of type DbContextOptions<ApplicationDbContext> and call the base method's constructor with the options value as input.  DbSet properties for both the Podcast and PostcastEpisode should be added in the ApplicationDbContext class as well.
 
 ![ApplicationDbContext][ApplicationDbContext]
 
