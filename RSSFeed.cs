@@ -14,12 +14,10 @@ namespace DEVELOPERSINC.PodcastRSS
     {
         [FunctionName("RSSFeed")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-            , ExecutionContext context, ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req, ExecutionContext context, ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
             
-            var path = System.IO.Path.Combine(context.FunctionDirectory, "itunes.rss");
             string returnValue = File.ReadAllText(context.FunctionDirectory+"itunes.rss");
             string name = req.Query["name"];
 
