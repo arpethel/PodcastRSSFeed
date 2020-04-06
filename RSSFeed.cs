@@ -14,20 +14,20 @@ namespace DEVELOPERSINC.PodcastRSS
     {
         [FunctionName("RSSFeed")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req, ExecutionContext context, ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req, Stream myBlob, ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
             
-            string returnValue = context.FunctionDirectory+"\\itunes.rss";
             string name = req.Query["name"];
+            name = myBlob.ToString();
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
 
-            string responseMessage = string.IsNullOrEmpty(returnValue)
+            string responseMessage = string.IsNullOrEmpty(name)
                 ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {returnValue}. This HTTP triggered function executed successfully.";
+                : $"Hello, {name}. This HTTP triggered function executed successfully.";
 
             return new OkObjectResult(responseMessage);
         }
