@@ -1,6 +1,6 @@
 # Podcast-RSS-Feed
 
-Create an ASP.NET MVC application that can be used to host a podcast.  Your application should allow users to create a podcast and add episodes to their podcast.  Your MVC application should contain an action method which returns an RSS feed in XML format from the entities in your SQL Database.
+Create an ASP.NET MVC application that can be used to host a podcast.  The application should allow users to create a podcast and add episodes to their podcast.  The MVC application should contain an action method which returns an RSS feed in XML format based on the entities in your SQL Database!
 
 -----
 
