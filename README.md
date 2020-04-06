@@ -19,8 +19,8 @@ Starup Visual studio and create a new ASP.NET MVC application.  Install the pack
 ### Decode the RSS XML & create the model
 
 Define the properties required to properly abstract a podcast and a podcast episode.  Create the Podcast and PodcastEpisode classes in the Models folder of your project.  The podcast should contain a generic collection member of type ICollection<PodcastEpisode>.  See the example podcast RSS file in the link below.
-
-https://help.apple.com/itc/podcasts_connect/#/itc1723472cb
+  
+https://github.com/MicroJEdi/AzureFunctionPodcastRSS/blob/master/itunes.rss
 
 Create the ApplicationDbContext class in the Models folder.  The ApplicationDbContext class must inherit from the DbContext class, contain one contructor with an input parameter called options of type DbContextOptions<ApplicationDbContext> and call the base method's constructor with the options value as input.  DbSet properties for both the Podcast and PostcastEpisode should be added in the ApplicationDbContext class as well.
 
