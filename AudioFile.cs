@@ -18,7 +18,7 @@ namespace DEVELOPERSINC.PodcastRSS
         {
             string path = context.FunctionDirectory+"/itunes.rss";
             string responseMessage = "HELLO WORLD";
-            //responseMessage = await File.ReadAllTextAsync(path);
+            responseMessage = await File.ReadAllTextAsync(path);
 
             return new OkObjectResult(responseMessage);
         }
