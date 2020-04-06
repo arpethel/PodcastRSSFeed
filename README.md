@@ -1,6 +1,6 @@
 # Podcast-RSS-Feed
 
-Create an XML 
+Create an ASP.NET MVC application that can be used to host a podcast.  Your application should allow users to create a podcast and add episodes to their podcast.  Your MVC application should contain an action method which returns an RSS feed in XML format from the entities in your SQL Database.
 
 -----
 
@@ -41,13 +41,11 @@ Finally add the Podcast and PostcastEpisode DbSet properties to the ApplicationD
 
 Add the database to the application services by adding the DbContext of your ApplicationDbContext.  Make sure to configure your database to use SqlServer based off a configuration string with the key "DefaultConnection".
 
-	services.AddDbContext<ApplicationDbContext>(options =>
-	    options.UseSqlServer(
-	        Configuration.GetConnectionString("DefaultConnection")));
+![ConfigureServices][ConfigureServices]
 
 Make sure to include the connection string to your database in appsettings.json as shown in the screenshot below:
 
-
+![AppSettingsJson][AppSettingsJson]
 
 -----
 
@@ -58,6 +56,7 @@ Make sure to include the connection string to your database in appsettings.json 
 Migrate the database to SQL Server by executing the commands below:
 
   Add-Migration InitialCreate
+  
   Update-Database
   
 
@@ -75,12 +74,7 @@ Create a new action method in the PodcastController called RSSFeed that queries 
 
 -----
 
-[ApplicationDbContext]: https://raw.githubusercontent.com/uid100/Deploy-SQLServer-on-Azure-VM/master/AddInboundPortRule.JPG
-[AddSqlLogin]: https://raw.githubusercontent.com/uid100/Deploy-SQLServer-on-Azure-VM/master/AddSqlLogin.JPG
-[CreateVM]: https://raw.githubusercontent.com/uid100/Deploy-SQLServer-on-Azure-VM/master/CreateVM.JPG
-[DbMapping]: https://raw.githubusercontent.com/uid100/Deploy-SQLServer-on-Azure-VM/master/DbMapping.JPG
-[EnableSqlAuthentication]: https://raw.githubusercontent.com/uid100/Deploy-SQLServer-on-Azure-VM/master/EnableSqlAuthentication.png
-[EnableTCPIP]: https://raw.githubusercontent.com/uid100/Deploy-SQLServer-on-Azure-VM/master/EnableTCPIP.JPG
-[EnableTCPPorts]: https://raw.githubusercontent.com/uid100/Deploy-SQLServer-on-Azure-VM/master/EnableTCPPorts.JPG
-[RDP]: https://raw.githubusercontent.com/uid100/Deploy-SQLServer-on-Azure-VM/master/RDP.JPG
+[ApplicationDbContext]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/DbContext.png
+[AppSettingsJson]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/AppSettingsJson.png
+[ConfigureServices]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/ConfigureServices.png
 
