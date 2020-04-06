@@ -10,9 +10,11 @@ Create an ASP.NET MVC application that can be used to host a podcast.  The appli
 
 ### Create an ASP.NET MVC application
 
-Starup Visual studio and create a new ASP.NET MVC application.  Install the package for Microsoft.EntityFrameworkCore.Tools via the NuGet Package manager or by executing the command below:
+Starup Visual studio and create a new ASP.NET MVC application.  Install the package for Microsoft.EntityFrameworkCore.Tools & Microsoft.EntityFrameworkCore.SqlServer via the NuGet Package manager or by executing the commands below:
 
   Install-Package Microsoft.EntityFrameworkCore.Tools
+  
+  Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
 -----
 
