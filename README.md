@@ -22,7 +22,7 @@ Starup Visual studio and create a new ASP.NET MVC application.  Install the pack
 
 Define the properties required to properly abstract a podcast and a podcast episode.  Create the Podcast and PodcastEpisode classes in the Models folder of your project.  The podcast should contain a generic collection member of type ICollection<PodcastEpisode>.  See the example podcast RSS file in the link below.
   
-https://github.com/MicroJEdi/AzureFunctionPodcastRSS/blob/master/itunes.rss
+https://github.com/MicroJEdi/PodcastRSSFeed/blob/master/itunes.rss
 
 Create the ApplicationDbContext class in the Models folder.  The ApplicationDbContext class must inherit from the DbContext class, contain one contructor with an input parameter called options of type DbContextOptions<ApplicationDbContext> and call the base method's constructor with the options value as input.  DbSet properties for both the Podcast and PostcastEpisode should be added in the ApplicationDbContext class as well.
 
@@ -59,7 +59,7 @@ Migrate the database to SQL Server by executing the commands below:
 
 Scaffold the controllers with views then run the app and create a single podcast with 2 episodes for that podcast.  Make sure to use a URL that points to an MP3 file in the wwwroot folder.  You may include your own files or use the Windows95.mp3 file in this repository.
 
-https://github.com/MicroJEdi/AzureFunctionPodcastRSS/blob/master/Windows95.mp3
+https://github.com/MicroJEdi/PodcastRSSFeed/blob/master/Windows95.mp3
   
 -----
 
