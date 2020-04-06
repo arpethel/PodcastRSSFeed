@@ -28,7 +28,7 @@ Create the ApplicationDbContext class in the Models folder.  The ApplicationDbCo
 
 -----
 
-## Step 4.
+## Step 3.
 
 ### Update Startup.cs & appsettings.json
 
@@ -42,7 +42,7 @@ Make sure to include the connection string to your database in appsettings.json 
 
 -----
 
-## Step 5.
+## Step 4.
 
 ### Migrate the database
 
@@ -61,7 +61,7 @@ https://github.com/MicroJEdi/AzureFunctionPodcastRSS/blob/master/Windows95.mp3
   
 -----
 
-## Step 6.
+## Step 5.
 
 ### Generate an RSS XML string
 
@@ -69,7 +69,7 @@ Create a new action method in the PodcastController called RSSFeed that queries 
 
 -----
 
-## Step 7.
+## Step 6.
 
 ### Personalize your podcast's homepage 
 
