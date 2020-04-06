@@ -65,7 +65,7 @@ https://github.com/MicroJEdi/AzureFunctionPodcastRSS/blob/master/Windows95.mp3
 
 ### Generate an RSS XML string
 
-Create a new action method in the PodcastController called RSSFeed that queries the pocast database and returns a string containing the Podcast RSS XML. 
+Create a new action method in the PodcastController called RSSFeed that queries the pocast database and returns a string containing the Podcast RSS XML.  XML parsers are very strict so it must match exactly!
 
 -----
 
