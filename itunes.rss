@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Professional Development</title>
+    <link>https://azure.us/podcasts/</link>
+    <language>en-us</language>
+    <copyright>&#169; 2020 DEVELOPERS INC</copyright>
+    <itunes:author>John Appleseed</itunes:author>
+    <description>
+      This is the most important thing that I am going to tell you ... on everything
+    </description>
+    <itunes:type>serial</itunes:type>
+    <itunes:owner>
+      <itunes:name>All About Everything</itunes:name>
+      <itunes:email>microsoftazure@icloud.com</itunes:email>
+    </itunes:owner>
+    <itunes:image
+      href="https://azure.us/podcasts/images/artwork.png"
+    />
+    <itunes:category text="Self Improvement">
+      <itunes:category text="Professional Development"/>
+    </itunes:category>
+    <itunes:explicit>true</itunes:explicit>
+    <item>
+      <itunes:episodeType>trailer</itunes:episodeType>
+      <itunes:title>DEVELOPERS INC Trailer</itunes:title>
+      <description>
+          <![CDATA[DEVELOPERS INC tells you about the important stuff. Listen on 
+          <a href="https://azure.us/podcasts/">Azure Podcasts</a>.]]>
+        </content:encoded>
+      </description>
+      <enclosure 
+        length="498537" 
+        type="audio/mpeg" 
+        url="https://azure.us/podcasts/everything/AllAboutEverything/Trailer.mp3"
+      />
+      <guid>aae20200401</guid>
+      <pubDate>Tue, 1 Apr 2020 01:15:00 EST</pubDate>
+      <itunes:duration>1079</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:episode>1</itunes:episode>
+      <itunes:season>1</itunes:season>
+      <title>S01 EP01 Tell Me About Yourself</title>
+      <description>
+        
+      </description>
+      <itunes:image
+        href="http://azure.us/podcasts/images/Season1_Episode1.jpg"
+      />
+      <link>href="http://example.com/podcasts/everything/</link>
+      <enclosure 
+        length="5650889" 
+        type="video/mp4" 
+        url="https://azure.us/podcasts/everything/AllAboutEverything/Season1_Episode1.mp3"
+      />
+      <guid>aae20200405</guid>
+      <pubDate>Tue, 5 Apr 2020 13:00:00 EST</pubDate>
+      <itunes:duration>3627</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
