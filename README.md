@@ -2,6 +2,8 @@
 
 Create an ASP.NET MVC application that can be used to host a podcast.  The application should allow users to create a podcast and add episodes to their podcast.  The MVC application should contain an action method which returns an RSS feed in XML format based on the entities in your SQL Database!
 
+![Podcast][Podcast]
+
 -----
 
 ## Step 1.
@@ -80,4 +82,5 @@ Update the HomeController Index View to promote your podcast and the URL to the 
 [ApplicationDbContext]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/DbContext.png
 [AppSettingsJson]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/AppSettingsJson.png
 [ConfigureServices]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/ConfigureServices.png
+[Podcast]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/podcast.jpg
 
