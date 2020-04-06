@@ -79,8 +79,8 @@ Update the HomeController Index View to promote your podcast and the URL to the 
 
 -----
 
-[ApplicationDbContext]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/DbContext.png
-[AppSettingsJson]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/AppSettingsJson.png
-[ConfigureServices]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/ConfigureServices.png
-[Podcast]: https://raw.githubusercontent.com/MicroJEdi/AzureFunctionPodcastRSS/master/podcast.jpg
+[ApplicationDbContext]: https://raw.githubusercontent.com/MicroJEdi/PodcastRSSFeed/master/DbContext.png
+[AppSettingsJson]: https://raw.githubusercontent.com/MicroJEdi/PodcastRSSFeed/master/AppSettingsJson.png
+[ConfigureServices]: https://raw.githubusercontent.com/MicroJEdi/PodcastRSSFeed/master/ConfigureServices.png
+[Podcast]: https://raw.githubusercontent.com/MicroJEdi/PodcastRSSFeed/master/podcast.jpg
 
