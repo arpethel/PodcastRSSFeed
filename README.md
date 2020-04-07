@@ -11,11 +11,11 @@ Create an ASP.NET MVC application that can be used to host a podcast.  The appli
 ### Create an ASP.NET MVC application
 
 Starup Visual studio and create a new ASP.NET MVC application.  Install the package for Microsoft.EntityFrameworkCore.Tools & Microsoft.EntityFrameworkCore.SqlServer via the NuGet Package manager or by executing the commands below:
-
+```
   Install-Package Microsoft.EntityFrameworkCore.Tools
   
   Install-Package Microsoft.EntityFrameworkCore.SqlServer
-
+```
 -----
 
 ## Step 2.
@@ -51,11 +51,11 @@ Make sure to include the connection string to your database in appsettings.json 
 ### Migrate the database
 
 Migrate the database to SQL Server by executing the commands below:
-
+```
   Add-Migration InitialCreate
   
   Update-Database
-  
+```
 
 ### Scaffold the controllers
 
