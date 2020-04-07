@@ -44,7 +44,7 @@ public class ApplicationDbContext
 
 ### Update Startup.cs & appsettings.json
 
-Add the database to the application services by adding the DbContext of your ApplicationDbContext.  Make sure to configure your database to use SqlServer based off a configuration string with the key "DefaultConnection".
+Add the database to the application services by adding the DbContext of your ApplicationDbContext.  Our application is going to use MS SQL Server which can be configured based off a configuration string with the key "DefaultConnection".
 
 ````csharp
 public void ConfigureServices(IServicesCollection services)
