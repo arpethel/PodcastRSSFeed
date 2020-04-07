@@ -69,7 +69,7 @@ Make sure to include the connection string to your database in appsettings.json 
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "MvcMovieContext": "Server=(localdb)\\MSSQLLocalDB;Database=PodcastDb;Trusted_Connection=True;"
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=PodcastDb;Trusted_Connection=True;"
   }
 }
 ````
