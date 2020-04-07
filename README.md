@@ -28,7 +28,15 @@ https://github.com/MicroJEdi/PodcastRSSFeed/blob/master/itunes.rss
 
 Create the ApplicationDbContext class in the Models folder.  The ApplicationDbContext class must inherit from the DbContext class, contain one contructor with an input parameter called options of type DbContextOptions<ApplicationDbContext> and call the base method's constructor with the options value as input.  DbSet properties for both the Podcast and PostcastEpisode should be added in the ApplicationDbContext class as well.
 
-![ApplicationDbContext][ApplicationDbContext]
+```csharp
+public class ApplicationDbContext
+{
+  public DbSet<Podcast> Podcasts { get; set; }
+  public DbSet<PodcastEpisode> PodcastEpisodes { get; set; }
+  
+  public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+}
+```
 
 -----
 
@@ -38,11 +46,33 @@ Create the ApplicationDbContext class in the Models folder.  The ApplicationDbCo
 
 Add the database to the application services by adding the DbContext of your ApplicationDbContext.  Make sure to configure your database to use SqlServer based off a configuration string with the key "DefaultConnection".
 
-![ConfigureServices][ConfigureServices]
+````csharp
+public void ConfigureServices(IServicesCollection services)
+{
+  services.AddDbContext<ApplicationDbContext>(opt => {
+    opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection") 
+  });
+  services.AddControllersWithViews();
+}
+````
 
 Make sure to include the connection string to your database in appsettings.json as shown in the screenshot below:
 
-![AppSettingsJson][AppSettingsJson]
+````json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "MvcMovieContext": "Server=(localdb)\\MSSQLLocalDB;Database=PodcastDb;Trusted_Connection=True;"
+  }
+}
+````
 
 -----
 
